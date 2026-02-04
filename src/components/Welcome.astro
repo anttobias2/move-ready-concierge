@@ -1,213 +1,370 @@
----
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Move Ready Concierge — Premium Moving Coordination</title>
+  <meta name="description" content="Move Ready Concierge delivers premium, stress-free moving coordination. One point of contact for movers, cleaners, haulers, and repairs." />
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-        <section id="helloWorld">
-            Hello World!
-        </section>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 5.0?</h2>
-		<p>
-			From content layers to server islands, click to learn more about the new features and
-			improvements in Astro 5.0
-		</p>
-	</a>
-</div>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --accent-soft: rgba(37,99,235,0.12);
+      --bg: #ffffff;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 18px;
+    }
 
-<style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
+    * { box-sizing: border-box; }
 
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      color: var(--primary);
+      line-height: 1.6;
+    }
 
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
+    a { text-decoration: none; color: inherit; }
 
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
 
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+    }
 
-	#links {
-		display: flex;
-		gap: 16px;
-	}
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 76px;
+    }
 
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
 
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary), #1e293b);
+      color: white;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
 
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
+    nav {
+      display: flex;
+      gap: 1.75rem;
+      align-items: center;
+      font-weight: 500;
+    }
 
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
+    nav a:hover { color: var(--accent); }
 
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      padding: 0.65rem 1.2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.15s ease;
+      box-shadow: 0 10px 28px rgba(15,23,42,0.18);
+    }
 
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 36px rgba(15,23,42,0.22);
+    }
 
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 26px; height: 3px; background: var(--primary); border-radius: 4px; }
 
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1.5rem;
+        display: none;
+        border-bottom: 1px solid var(--border);
+      }
 
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
+      nav.open { display: flex; }
+      .hamburger { display: flex; }
+    }
 
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
+    .hero {
+      padding: 6rem 0 5rem;
+      text-align: center;
+    }
 
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
 
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
 
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
+    .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: white;
+      padding: 0.65rem 1.2rem;
+      border-radius: 12px;
+      font-weight: 600;
+    }
 
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
+    #book {
+        margin-top: 3rem;
+    }
 
-		#links {
-			flex-wrap: wrap;
-		}
+    section { 
+    padding: 5rem 0; 
+    scroll-margin-top: 96px
+    }
 
-		#links a.button {
-			padding: 14px 18px;
-		}
+    .section-title { text-align: center; margin-bottom: 3rem; }
+    .section-title h2 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .section-title p { color: var(--muted); }
 
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
 
-		h1 {
-			line-height: 1.5;
-		}
-	}
-</style>
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(15,23,42,0.08);
+      border-color: transparent;
+    }
+
+    .steps { counter-reset: step; }
+
+    .step {
+      position: relative;
+      padding-left: 3.5rem;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      border-radius: var(--radius);
+      padding: 5rem 2rem;
+      text-align: center;
+      box-shadow: 0 30px 80px rgba(15,23,42,0.35);
+    }
+
+    .cta h2 { font-size: 2.4rem; margin-bottom: 1rem; }
+    .cta p { opacity: 0.9; margin-bottom: 2.5rem; }
+
+    footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <div class="logo-mark">MR</div>
+      Move Ready Concierge
+    </div>
+
+    <nav id="navLinks">
+      <a href="#about">About</a>
+      <a href="#process">How It Works</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#book" class="btn-primary">Book Now</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero container">
+    <h1>A Premium, Stress-Free Way to Move</h1>
+    <p>
+      Move Ready Concierge manages every detail of your move — coordinating movers, cleaners, haulers, and repairs —
+      so you can focus on your next chapter, not logistics.
+    </p>
+    <div class="hero-cta">
+      <a href="#book" class="btn-primary">Schedule Your Consultation</a>
+      <a href="#process" class="btn-secondary">How It Works</a>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <div class="section-title">
+      <h2>White-Glove Move Management</h2>
+      <p>We replace chaos with clarity, speed, and confidence.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>One Point of Contact</h3>
+        <p>No juggling vendors, timelines, or invoices. We handle everything through a single streamlined workflow.</p>
+      </div>
+      <div class="card">
+        <h3>Elite Vendor Network</h3>
+        <p>We partner with trusted, fully vetted movers, cleaners, haulers, and contractors.</p>
+      </div>
+      <div class="card">
+        <h3>Precision Execution</h3>
+        <p>Every detail is planned, scheduled, and managed so your move is seamless.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="container">
+    <div class="section-title">
+      <h2>How It Works</h2>
+      <p>A simple, efficient three-step process.</p>
+    </div>
+
+    <div class="grid steps">
+      <div class="card step">
+        <h3>Consultation</h3>
+        <p>We assess your needs, timeline, and priorities to build your personalized plan.</p>
+      </div>
+      <div class="card step">
+        <h3>Coordination</h3>
+        <p>We schedule and manage movers, cleaners, haulers, repairs, and logistics.</p>
+      </div>
+      <div class="card step">
+        <h3>Execution</h3>
+        <p>Your move happens smoothly, efficiently, and stress-free.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="container">
+    <div class="section-title">
+      <h2>Concierge Services</h2>
+      <p>Everything required to prepare, coordinate, and complete your move.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">Moving Coordination</div>
+      <div class="card">Professional Cleaning</div>
+      <div class="card">Junk Removal & Hauling</div>
+      <div class="card">Minor Repairs & Touch-Ups</div>
+      <div class="card">Home Staging & Organization</div>
+      <div class="card">Full Project Management</div>
+    </div>
+  </section>
+
+  <section id="book" class="container">
+    <div class="cta">
+      <h2>Move Smarter. Move Easier.</h2>
+      <p>Schedule your free consultation and let our concierge team manage everything.</p>
+      <a href="#contact" class="btn-primary">Book Your Consultation</a>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Let’s simplify your move.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card"><h3>Email</h3><p>hello@movereadyconcierge.com</p></div>
+      <div class="card"><h3>Phone</h3><p>(555) 123-4567</p></div>
+      <div class="card"><h3>Service Area</h3><p>Greater Seattle Area</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">© <span id="year"></span> Move Ready Concierge</div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const year = document.getElementById('year');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  }
+
+  if (year) {
+    year.textContent = new Date().getFullYear().toString();
+  }
+</script>
+
+
+</body>
+</html>
