@@ -1,11 +1,12 @@
 ---
 // src/components/Welcome.astro
+import { base } from 'astro:config/client';
 ---
 
 <header>
   <div class="container nav">
     <div class="logo">
-      <img src="favicon.png" alt="Move-Ready Concierge Logo" width="56" height="56" />
+      <img src={`${base}/favicon.png`} alt="Move-Ready Concierge Logo" width="56" height="56" />
       Move Ready Concierge
     </div>
 
