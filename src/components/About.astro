@@ -1,5 +1,5 @@
 ---
-// src/components/Welcome.astro
+// src/components/About.astro
 import { base } from 'astro:config/client';
 ---
 
@@ -11,11 +11,12 @@ import { base } from 'astro:config/client';
     </div>
 
     <nav id="navLinks">
-      <a href={`${base}about`}>About</a>
-      <a href="#process">How It Works</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="#book" class="btn-primary">Book Now</a>
+      <a href={`${base}/`}>Home</a>
+      <a href={`${base}/about`}>About</a>
+      <a href={`${base}/#process`}>How It Works</a>
+      <a href={`${base}/#services`}>Services</a>
+      <a href={`${base}/#contact`}>Contact</a>
+      <a href={`${base}/#book`} class="btn-primary">Book Now</a>
     </nav>
 
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
@@ -23,112 +24,95 @@ import { base } from 'astro:config/client';
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero-about">
     <div class="container">
-      <h1>A Premium, Stress-Free Way to Move</h1>
+      <h1>About Move Ready Concierge</h1>
+      <p>Founded on the belief that moving should be exciting, not exhausting.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-title">
+      <h2>Our Story</h2>
+      <p>Transforming the moving experience one client at a time</p>
+    </div>
+
+    <div class="story-content">
       <p>
-        We manage every detail of your move — from movers to cleaners — so you can relax and enjoy the excitement of your next chapter.
+        Move Ready Concierge was born from a simple observation: moving is one of life's most 
+        stressful events, yet it doesn't have to be. After experiencing countless chaotic moves 
+        ourselves and watching friends and family struggle with the endless logistics, we knew 
+        there had to be a better way.
       </p>
-      <div class="hero-cta">
-        <a href="#book" class="btn-primary">Schedule Your Consultation</a>
-        <a href="#process" class="btn-secondary">How It Works</a>
-      </div>
+      <p>
+        We created Move Ready Concierge to be the calm, capable partner you need during this 
+        transition. Our white-glove service replaces stress with structure, chaos with coordination, 
+        and anxiety with assurance.
+      </p>
     </div>
   </section>
 
-  <section id="about" class="container">
+  <section class="container">
     <div class="section-title">
-      <h2>White-Glove Move Management</h2>
-      <p>We replace chaos with clarity, speed, and confidence.</p>
+      <h2>Our Values</h2>
+      <p>What drives us every day</p>
     </div>
 
     <div class="grid">
       <div class="card">
-        <h3>One Point of Contact</h3>
-        <p>No juggling vendors, timelines, or invoices. We handle everything through a single streamlined workflow.</p>
+        <div class="value-icon">🎯</div>
+        <h3>Precision</h3>
+        <p>Every detail matters. We plan meticulously and execute flawlessly so nothing falls through the cracks.</p>
       </div>
       <div class="card">
-        <h3>Elite Vendor Network</h3>
-        <p>We partner with trusted, fully vetted movers, cleaners, haulers, and contractors.</p>
+        <div class="value-icon">🤝</div>
+        <h3>Trust</h3>
+        <p>We've built relationships with the best vendors in the business. Your belongings and your time are in expert hands.</p>
       </div>
       <div class="card">
-        <h3>Precision Execution</h3>
-        <p>Every detail is planned, scheduled, and managed so your move is seamless.</p>
+        <div class="value-icon">💎</div>
+        <h3>Excellence</h3>
+        <p>We don't just meet expectations—we exceed them. Your satisfaction is our benchmark for success.</p>
+      </div>
+      <div class="card">
+        <div class="value-icon">🧘</div>
+        <h3>Peace of Mind</h3>
+        <p>Moving is complex. Our job is to make it feel simple, allowing you to stay focused on what matters most.</p>
       </div>
     </div>
   </section>
 
-  <section id="process" class="container">
+  <section class="container">
     <div class="section-title">
-      <h2>How It Works</h2>
-      <p>A simple, efficient three-step process.</p>
+      <h2>Why Choose Us?</h2>
+      <p>The Move Ready difference</p>
     </div>
 
-    <div class="grid steps">
-      <div class="card step">
-        <h3>Consultation</h3>
-        <p>We assess your needs, timeline, and priorities to build your personalized plan.</p>
+    <div class="grid why-grid">
+      <div class="card why-card">
+        <h3>✓ Vetted Network</h3>
+        <p>We work exclusively with licensed, insured, and proven service providers who share our commitment to excellence.</p>
       </div>
-      <div class="card step">
-        <h3>Coordination</h3>
-        <p>We schedule and manage movers, cleaners, haulers, repairs, and logistics.</p>
+      <div class="card why-card">
+        <h3>✓ One Point of Contact</h3>
+        <p>No more juggling phone calls and emails. We coordinate everything, so you have a single, reliable source for updates and decisions.</p>
       </div>
-      <div class="card step">
-        <h3>Execution</h3>
-        <p>Your move happens smoothly, efficiently, and stress-free.</p>
+      <div class="card why-card">
+        <h3>✓ Transparent Pricing</h3>
+        <p>No hidden fees or surprise charges. You'll know exactly what to expect from our initial consultation through completion.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="services" class="container">
-    <div class="section-title">
-      <h2>Concierge Services</h2>
-      <p>Everything required to prepare, coordinate, and complete your move.</p>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <h3>🚚 Moving Coordination</h3>
-      </div>
-      <div class="card">
-        <h3>✨ Professional Cleaning</h3>
-      </div>
-      <div class="card">
-        <h3>🗑️ Junk Removal & Hauling</h3>
-      </div>
-      <div class="card">
-        <h3>📋 Full Project Management</h3>
+      <div class="card why-card">
+        <h3>✓ Local Expertise</h3>
+        <p>We know the Greater Seattle Area inside and out—from parking restrictions to the best times to move in each neighborhood.</p>
       </div>
     </div>
   </section>
 
-  <section id="book" class="container">
+  <section class="container">
     <div class="cta">
-      <h2>Your Smoothest Move Starts Here</h2>
-      <p>Schedule your free consultation and let our concierge team manage everything.</p>
-      <a href="#contact" class="btn-primary">Book Your Consultation</a>
-    </div>
-  </section>
-
-  <section id="contact" class="container">
-    <div class="section-title">
-      <h2>Contact</h2>
-      <p>Let's simplify your move.</p>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <h3>📧 Email</h3>
-        <p>hello@movereadyconcierge.com</p>
-      </div>
-      <div class="card">
-        <h3>📞 Phone</h3>
-        <p>(555) 123-4567</p>
-      </div>
-      <div class="card">
-        <h3>📍 Service Area</h3>
-        <p>Greater Seattle Area</p>
-      </div>
+      <h2>Ready to Experience the Difference?</h2>
+      <p>Let's make your move the smoothest one yet.</p>
+      <a href={`${base}/#book`} class="btn-primary">Schedule Your Consultation</a>
     </div>
   </section>
 </main>
@@ -239,23 +223,6 @@ import { base } from 'astro:config/client';
     box-shadow: 0 8px 30px rgba(245,158,11,0.4);
   }
 
-  .btn-secondary {
-    border: 2px solid rgba(255,255,255,0.4);
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(10px);
-    color: white;
-    padding: 0.8rem 1.6rem;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-
-  .btn-secondary:hover {
-    background: rgba(255,255,255,0.3);
-    border-color: rgba(255,255,255,0.6);
-    transform: translateY(-2px);
-  }
-
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
   .hamburger span { width: 26px; height: 3px; background: var(--primary); border-radius: 4px; }
 
@@ -277,70 +244,29 @@ import { base } from 'astro:config/client';
     .hamburger { display: flex; }
   }
 
-  .hero {
-    position: relative;
-    padding: 10rem 0 8rem;
+  .hero-about {
+    padding: 8rem 0 6rem;
     text-align: center;
-    background:
-      linear-gradient(rgba(30,58,95,0.7), rgba(30,58,95,0.75)),
-      url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.explicit.bing.net%2Fth%2Fid%2FOIP.FnQ9QLXLGPurssnXD4cuHgHaEK%3Fpid%3DApi&f=1&ipt=0e68ef473d63a8117588554eb4fc40dd01a64813ec55bdfea8d9804dc17ba365&ipo=images") center / cover no-repeat;
+    background: linear-gradient(135deg, var(--primary), #2d5a8f);
     color: white;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
   }
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    background-size: cover;
-    background-position: center;
-    filter: blur(0px) contrast(1.1) brightness(1.05);
-    z-index: -1;
-  }
-
-  .hero h1 {
+  .hero-about h1 {
     font-family: 'Sora', sans-serif;
     font-size: clamp(2.5rem, 5vw, 3.6rem);
     margin-bottom: 1.2rem;
     letter-spacing: -0.02em;
-    text-shadow: 0 2px 25px rgba(0,0,0,0.3);
     font-weight: 700;
   }
 
-  .hero p {
-    max-width: 680px;
-    margin: 0 auto 2.8rem;
-    color: rgba(255,255,255,0.95);
-    font-size: 1.15rem;
-    text-shadow: 0 1px 10px rgba(0,0,0,0.2);
-    line-height: 1.8;
+  .hero-about p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
-  .hero-cta { 
-    display: flex; 
-    gap: 1.2rem; 
-    justify-content: center; 
-    flex-wrap: wrap; 
-  }
-
-  .hero h1, .hero p, .hero-cta {
-    animation: fadeUp 0.7s ease both;
-  }
-
-  .hero p { animation-delay: 0.15s; }
-  .hero-cta { animation-delay: 0.3s; }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  section { padding: 5.5rem 0; scroll-margin-top: 100px }
+  section { padding: 5.5rem 0; }
 
   .section-title { 
     text-align: center; 
@@ -360,10 +286,26 @@ import { base } from 'astro:config/client';
     font-size: 1.1rem;
   }
 
+  .story-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .story-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .card {
@@ -381,6 +323,12 @@ import { base } from 'astro:config/client';
     border-color: var(--accent-soft);
   }
 
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
   .card h3 {
     font-family: 'Sora', sans-serif;
     color: var(--primary);
@@ -393,27 +341,8 @@ import { base } from 'astro:config/client';
     line-height: 1.7;
   }
 
-  .steps { counter-reset: step; }
-
-  .step { position: relative; padding-left: 4rem; }
-
-  .step::before {
-    counter-increment: step;
-    content: counter(step);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    display: grid;
-    place-items: center;
-    font-weight: 700;
-    color: white;
-    font-family: 'Sora', sans-serif;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 12px rgba(245,158,11,0.25);
+  .why-card h3 {
+    color: var(--accent);
   }
 
   .cta {
