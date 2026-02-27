@@ -1,0 +1,674 @@
+---
+// src/components/Services.astro
+import { base } from 'astro:config/client';
+---
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <img src={`${base}/favicon.png`} alt="Move-Ready Concierge Logo" width="56" height="56" />
+      Move Ready Concierge
+    </div>
+
+    <nav id="navLinks">
+      <a href={`${base}/`}>Home</a>
+      <a href={`${base}about`}>About</a>
+      <a href={`${base}process`}>How It Works</a>
+      <a href={`${base}services`}>Services</a>
+      <a href={`${base}/#contact`}>Contact</a>
+      <a href={`${base}/#book`} class="btn-primary">Book Now</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero-services">
+    <div class="container">
+      <h1>Concierge Services</h1>
+      <p>Everything you need for a seamless move, managed by a single dedicated team.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-title">
+      <h2>Our Core Services</h2>
+      <p>Comprehensive moving solutions tailored to your needs</p>
+    </div>
+
+    <div class="services-list">
+      <div class="service-card featured">
+        <div class="service-icon">🚚</div>
+        <div class="service-content">
+          <h3>Moving Coordination</h3>
+          <p>
+            We partner with licensed, insured, and highly-rated professional movers to handle your 
+            belongings with care. From packing to transport to unloading, we oversee every step to 
+            ensure your items arrive safely at your new home.
+          </p>
+          <ul class="service-features">
+            <li>Vetted professional moving companies</li>
+            <li>Packing and unpacking services</li>
+            <li>Furniture disassembly and reassembly</li>
+            <li>Loading, transport, and unloading</li>
+            <li>Full insurance coverage</li>
+            <li>Timeline management and coordination</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card featured">
+        <div class="service-icon">✨</div>
+        <div class="service-content">
+          <h3>Professional Cleaning</h3>
+          <p>
+            Move-in and move-out cleaning services ensure both locations are spotless. Whether you need 
+            your old place ready for the next occupants or your new home welcoming and fresh, we coordinate 
+            trusted cleaning professionals who deliver exceptional results.
+          </p>
+          <ul class="service-features">
+            <li>Deep cleaning for move-in/move-out</li>
+            <li>Kitchen and bathroom sanitization</li>
+            <li>Floor cleaning and care</li>
+            <li>Window and blind cleaning</li>
+            <li>Carpet and upholstery cleaning</li>
+            <li>Same-day or scheduled service</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card featured">
+        <div class="service-icon">🗑️</div>
+        <div class="service-content">
+          <h3>Junk Removal & Hauling</h3>
+          <p>
+            Moving is the perfect time to declutter. Our junk removal service handles unwanted furniture, 
+            appliances, and other items you no longer need. We'll donate what we can and responsibly 
+            dispose of the rest, leaving you with a clean slate.
+          </p>
+          <ul class="service-features">
+            <li>Furniture and appliance removal</li>
+            <li>E-waste disposal</li>
+            <li>Donation coordination</li>
+            <li>Recycling services</li>
+            <li>Same-day pickup available</li>
+            <li>Eco-friendly disposal methods</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card featured">
+        <div class="service-icon">🔧</div>
+        <div class="service-content">
+          <h3>Minor Repairs & Handyman Services</h3>
+          <p>
+            Small repairs can make a big difference when preparing to sell or settling into a new home. 
+            We coordinate trusted handymen to handle painting, drywall repair, fixture installation, 
+            and other maintenance tasks quickly and professionally.
+          </p>
+          <ul class="service-features">
+            <li>Drywall and paint touch-ups</li>
+            <li>Fixture installation and repairs</li>
+            <li>Door and hardware adjustments</li>
+            <li>Light carpentry work</li>
+            <li>Appliance installation</li>
+            <li>Pre-listing home prep</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-title">
+      <h2>Full Project Management</h2>
+      <p>The backbone of our concierge service</p>
+    </div>
+
+    <div class="management-content">
+      <p class="intro-text">
+        What truly sets Move Ready Concierge apart is our comprehensive project management. 
+        We don't just connect you with vendors—we become your dedicated move manager, 
+        coordinating every detail so you don't have to.
+      </p>
+
+      <div class="grid management-grid">
+        <div class="card">
+          <h3>📋 Timeline Planning</h3>
+          <p>We create a detailed schedule that coordinates all services, ensuring everything happens in the right order at the right time.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Vendor Management</h3>
+          <p>One point of contact manages all vendors, handles communication, and resolves any issues that arise.</p>
+        </div>
+        <div class="card">
+          <h3>💰 Budget Oversight</h3>
+          <p>Transparent pricing and cost management from start to finish. No surprise charges or hidden fees.</p>
+        </div>
+        <div class="card">
+          <h3>📞 24/7 Support</h3>
+          <p>Questions? Concerns? We're available when you need us, providing peace of mind throughout your move.</p>
+        </div>
+        <div class="card">
+          <h3>✅ Quality Control</h3>
+          <p>We inspect and verify that all work meets our high standards before considering any job complete.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Problem Resolution</h3>
+          <p>If something goes wrong, we handle it immediately. You'll never be left to deal with vendor issues alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-title">
+      <h2>Additional Services</h2>
+      <p>Extra support when you need it</p>
+    </div>
+
+    <div class="grid additional-services">
+      <div class="card addon-card">
+        <h3>🏠 Home Staging</h3>
+        <p>Preparing your home for sale? We coordinate professional staging services to help your property shine.</p>
+      </div>
+      <div class="card addon-card">
+        <h3>📦 Storage Solutions</h3>
+        <p>Need temporary storage between moves? We'll arrange secure, climate-controlled options.</p>
+      </div>
+      <div class="card addon-card">
+        <h3>🐕 Pet Relocation</h3>
+        <p>We can coordinate pet transportation services to ensure your furry friends travel safely.</p>
+      </div>
+      <div class="card addon-card">
+        <h3>🌱 Landscaping</h3>
+        <p>Yard work before selling or after moving in? We connect you with trusted landscaping professionals.</p>
+      </div>
+      <div class="card addon-card">
+        <h3>📧 Mail Forwarding</h3>
+        <p>We'll help you set up mail forwarding and update your address with key service providers.</p>
+      </div>
+      <div class="card addon-card">
+        <h3>🔌 Utility Setup</h3>
+        <p>Let us coordinate utility transfers and new service setup at your destination.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container pricing-section">
+    <div class="section-title">
+      <h2>How Pricing Works</h2>
+      <p>Simple, transparent, and customized to your needs</p>
+    </div>
+
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Consultation</h3>
+          <div class="price">Free</div>
+        </div>
+        <p>We start with a complimentary consultation to understand your needs and provide a detailed quote.</p>
+      </div>
+
+      <div class="pricing-card highlight">
+        <div class="pricing-header">
+          <h3>Custom Quote</h3>
+          <div class="price">Varies</div>
+        </div>
+        <p>Every move is unique. We provide transparent, itemized pricing based on your specific requirements—no hidden fees.</p>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Payment</h3>
+          <div class="price">Flexible</div>
+        </div>
+        <p>We offer flexible payment options and timing that works with your schedule and budget.</p>
+      </div>
+    </div>
+
+    <div class="pricing-note">
+      <p><strong>What's included:</strong> Our concierge fee covers full project management, vendor coordination, timeline oversight, and dedicated support throughout your entire move. Individual service costs (movers, cleaners, etc.) are billed separately but coordinated by us.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="cta">
+      <h2>Let's Build Your Custom Moving Plan</h2>
+      <p>Tell us what you need, and we'll handle the rest.</p>
+      <a href={`${base}/#book`} class="btn-primary">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© <span id="year"></span> Move Ready Concierge — Making your move feel like home</div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const year = document.getElementById('year');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  }
+
+  if (year) {
+    year.textContent = new Date().getFullYear().toString();
+  }
+</script>
+
+<style>
+  :root {
+    --primary: #1e3a5f;
+    --accent: #f59e0b;
+    --accent-light: #fbbf24;
+    --accent-soft: rgba(245,158,11,0.12);
+    --warm: #fffbeb;
+    --warm-mid: #fef3c7;
+    --bg: #ffffff;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --radius: 20px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #ffffff;
+    color: var(--primary);
+    line-height: 1.7;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 4rem 1.25rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(245,158,11,0.15);
+    z-index: 1000;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-weight: 700;
+    font-family: 'Sora', sans-serif;
+    letter-spacing: -0.02em;
+    font-size: 1.1rem;
+    color: var(--primary);
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  nav a:hover { 
+    color: var(--accent);
+    transition: color 0.3s ease;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(245,158,11,0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(245,158,11,0.4);
+  }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 26px; height: 3px; background: var(--primary); border-radius: 4px; }
+
+  @media (max-width: 768px) {
+    nav {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.98);
+      flex-direction: column;
+      padding: 1.5rem;
+      display: none;
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+    }
+
+    nav.open { display: flex; }
+    .hamburger { display: flex; }
+  }
+
+  .hero-services {
+    padding: 8rem 0 6rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), #2d5a8f);
+    color: white;
+  }
+
+  .hero-services h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.6rem);
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  .hero-services p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  section { padding: 5.5rem 0; }
+
+  .section-title { 
+    text-align: center; 
+    margin-bottom: 3.5rem; 
+  }
+  
+  .section-title h2 { 
+    font-family: 'Sora', sans-serif;
+    font-size: 2.4rem; 
+    margin-bottom: 0.8rem;
+    color: var(--primary);
+    font-weight: 700;
+  }
+  
+  .section-title p { 
+    color: var(--muted); 
+    font-size: 1.1rem;
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: #ffffff;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 3rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .service-card.featured {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(245,158,11,0.15);
+    border-color: var(--accent-soft);
+  }
+
+  .service-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 4px 12px rgba(245,158,11,0.25);
+  }
+
+  .service-content h3 {
+    font-family: 'Sora', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .service-content > p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .service-features li {
+    color: var(--muted);
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .management-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .management-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .additional-services {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(245,158,11,0.15);
+    border-color: var(--accent-soft);
+  }
+
+  .card h3 {
+    font-family: 'Sora', sans-serif;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+  }
+
+  .card p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .addon-card h3 {
+    color: var(--accent);
+  }
+
+  .pricing-section {
+    background: var(--warm);
+    border-radius: var(--radius);
+  }
+
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .pricing-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .pricing-card.highlight {
+    border-color: var(--accent);
+    border-width: 2px;
+    box-shadow: 0 8px 25px rgba(245,158,11,0.2);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(245,158,11,0.15);
+  }
+
+  .pricing-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-header h3 {
+    font-family: 'Sora', sans-serif;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-family: 'Sora', sans-serif;
+    font-size: 2rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .pricing-card p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .pricing-note {
+    background: white;
+    border: 1.5px solid var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .pricing-note p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .cta {
+    background:
+      linear-gradient(135deg, rgba(245,158,11,0.08), transparent),
+      linear-gradient(135deg, var(--primary), #2d5a8f);
+    color: white;
+    border-radius: var(--radius);
+    padding: 6rem 2.5rem;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(30,58,95,0.25);
+  }
+
+  .cta h2 { 
+    font-family: 'Sora', sans-serif;
+    font-size: 2.6rem; 
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .cta p { 
+    opacity: 0.95; 
+    margin-bottom: 2.8rem;
+    font-size: 1.15rem;
+  }
+
+  footer {
+    padding: 3rem 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .service-card.featured {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .service-features {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
